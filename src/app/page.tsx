@@ -1,11 +1,46 @@
 import Image from "next/image";
+import { Form } from "./components/Form/Form";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+      <section id="home">
+        <p>
+          Según el informe del American Council on the Teaching of Foreign Languages (ACTFL), el dominio de un segundo idioma puede aumentar los ingresos de un individuo en un promedio del 10% al 15%. Este aumento puede variar dependiendo del sector y la ubicación geográfica, pero proporciona una indicación general del impacto económico positivo que puede tener el conocimiento de idiomas adicionales en el salario.
+        </p>
+        <p>
+          Bienvenido a Idiomas, donde exploramos el poder y la belleza de los idiomas. Desde el español melódico hasta el tono suave del italiano, cada idioma es una ventana hacia una cultura única y fascinante.</p>
+        <p>
+          En un mundo cada vez más interconectado, dominar varios idiomas no solo es una habilidad invaluable, sino también una puerta abierta a nuevas oportunidades personales y profesionales. En Idiomas 360, nos apasiona ayudarte a navegar por este vasto universo lingüístico.
+        </p>
+      </section>
+      <section id="about">
+        <h2>Qué es Idiomas 360?</h2>
+        <p>Idiomas 360 va más allá de la enseñanza tradicional de idiomas, aplicamos una nueva metodología con resultados que van más allá del promedio.</p>
+        <div>
+          <h4>Por Qué Elegirnos</h4>
+          <ul>
+            <li><strong>Experiencia y Profesionalismo:</strong> Con años de experiencia en la enseñanza de idiomas y servicios lingüísticos, nuestros expertos están aquí para apoyarte en tu viaje lingüístico.</li>
+            <li><strong>Enfoque Personalizado:</strong> Cada estudiante es único, por lo tanto, adaptamos nuestros métodos de enseñanza y servicios para satisfacer tus necesidades individuales.</li>
+            <li><strong>Pasión por los Idiomas:</strong> Nos apasiona lo que hacemos y creemos en el poder transformador de los idiomas para conectar a las personas y enriquecer vidas.</li>
+          </ul>
+        </div>
+      
+        <div>
+          <h4>Únete a Nosotros</h4>
+          <p>Ya sea que estés buscando expandir tus horizontes personales o mejorar las habilidades lingüísticas de tu equipo, estamos aquí para ayudarte a alcanzar tus objetivos. Explora nuestro sitio web para conocer más sobre nuestros servicios y cómo podemos ayudarte a alcanzar fluidez en el idioma.</p>
+          <p><strong>¡Descubre el mundo a través de los idiomas con [Nombre de tu Empresa] hoy mismo!</strong></p>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contáctanos</h2>
+        <h4>Puedes hacernos llegar tus dudas y/o sugerencias a:</h4>
+        <Form />
+      </section>
+      {/* <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
+          Get started by editing &nbsp;
           <code className="font-mono font-bold">src/app/page.tsx</code>
         </p>
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
@@ -46,12 +81,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className="mb-3 text-2xl font-semibold">
+          <h3 className="mb-3 text-2xl font-semibold">
             Docs{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
-          </h2>
+          </h3>
           <p className="m-0 max-w-[30ch] text-sm opacity-50">
             Find in-depth information about Next.js features and API.
           </p>
@@ -63,12 +98,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className="mb-3 text-2xl font-semibold">
+          <h3 className="mb-3 text-2xl font-semibold">
             Learn{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
-          </h2>
+          </h3>
           <p className="m-0 max-w-[30ch] text-sm opacity-50">
             Learn about Next.js in an interactive course with&nbsp;quizzes!
           </p>
@@ -80,12 +115,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className="mb-3 text-2xl font-semibold">
+          <h3 className="mb-3 text-2xl font-semibold">
             Templates{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
-          </h2>
+          </h3>
           <p className="m-0 max-w-[30ch] text-sm opacity-50">
             Explore starter templates for Next.js.
           </p>
@@ -97,17 +132,17 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className="mb-3 text-2xl font-semibold">
+          <h3 className="mb-3 text-2xl font-semibold">
             Deploy{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
-          </h2>
+          </h3>
           <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
+      </div> */}
     </main>
   );
 }
