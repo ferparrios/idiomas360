@@ -6,9 +6,17 @@
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 45, 0, 129;
-  --main: rgb(188, 152, 255);
+  /* --blue: #47B7FC; */
+  --secondary: rgb(27,242,208);
+  /* --main: rgb(188, 152, 255);
   --main-light: rgb(224, 207, 255);
-  --main-dark: rgb(45, 0, 129);
+  --main-dark: rgb(45, 0, 129); */
+  --main: #33A1FB;
+  --main-light: #5BBAFE;
+  --main-dark: rgb(6,75,140);
+  --white: white;
+  --white-opac90: rgba(255, 255, 255, 0.9);
+  --black: black;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,19 +32,9 @@ html {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-    max-width: 950px;
-    margin: 0 auto;
-}
-
-main {
-
+  background-color: var(--white);
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 h2 {
