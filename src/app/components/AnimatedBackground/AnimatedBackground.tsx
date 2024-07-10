@@ -5,7 +5,11 @@ type Lang = {
   translation: string;
 }
 
-const AnimatedBackground = () => {
+type AnimatedBackgroundProps = {
+  isDark: boolean;
+}
+
+const AnimatedBackground = ({isDark}: AnimatedBackgroundProps) => {
 
   const helloInDifferentLanguages = [
     { language: "English", translation: "Hello" },
@@ -31,9 +35,9 @@ const AnimatedBackground = () => {
   ];
   
   return (
-    <ul className={styles.background}>
+    <ul className={`${styles.background} ${isDark ? styles.darkMode : ""}`}>
       {helloInDifferentLanguages.map((element: Lang, index: number) => (
-        <li key={index}>{element.translation}</li>
+        <li key={index} className={isDark ? styles.darkModeL : ""}>{element.translation}</li>
       ))}
     </ul>
   );

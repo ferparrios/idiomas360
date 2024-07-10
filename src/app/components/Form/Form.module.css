@@ -1,33 +1,83 @@
 .form {
+  display: flex;
+  flex-direction: column;
   padding: 30px;
-  margin: 20px;
-  width: 500px;
-  background-color: rgba(255, 255, 255, 0.288);
-  color: black;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.068);
   border-radius: 5px;
-  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  backdrop-filter: blur(2px);
+  box-shadow: var(--main-dark-opac20) 0px 13px 27px -5px,
+    var(--main-dark-opac20) 0px 8px 16px -8px;
 }
 
-.form--contact {
-
+.form:hover {
+  background-color: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.33);
 }
 
 .input__container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 12px 10px;
   margin: 8px;
-  background-color: rgba(255, 255, 255, 0.452);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 3px;
+  backdrop-filter: blur(5px);
+}
+.input__container:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .input {
-  border-radius: 3px;
+  width: 100%;
+  max-width: 250px;
+  padding: 4px 8px;
+  border-radius: 5px;
   border: 1px solid var(--main);
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.input::placeholder {
+  font-size: 1.4rem;
+  font-weight: 300;
 }
 
 .textarea {
-  width: 222px;
+  width: 100%;
+  max-width: 250px;
   border-radius: 3px;
   border: 1px solid var(--main);
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.button {
+  padding: 10px 20px;
+  margin: 18px 8px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+.button:hover,
+.button:focus {
+  color: var(--main);
+  background: var(--secondary);
+  border: 1px solid var(--secondary);
+  /* text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff; */
+  box-shadow: 0 0 2px var(--secondary), 0 0 8px var(--secondary),
+    0 0 12px var(--secondary), 0 0 30px var(--secondary);
 }

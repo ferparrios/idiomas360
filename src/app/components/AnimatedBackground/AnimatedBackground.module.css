@@ -1,12 +1,11 @@
-/* src/components/AnimatedBackground/AnimatedBackground.module.css */
 @keyframes animate {
   0% {
-    transform: translateY(0) rotate(0deg);
+    transform: translateY(0px) rotate(0deg) translateX(-50px);
     opacity: 1;
     border-radius: 0;
   }
   100% {
-    transform: translateY(-1000px) rotate(720deg);
+    transform: translateY(-1000px) rotate(720deg) translateX(-50px);
     opacity: 0;
     border-radius: 50%;
   }
@@ -37,6 +36,10 @@
   color: var(--main-dark);
   background: rgba(255, 255, 255, 0.2);
   animation: animate 19s linear infinite;
+}
+
+.background li.darkModeL {
+  color: var(--white);
 }
 
 .background li:nth-child(0) {
@@ -108,4 +111,8 @@
   height: 129px;
   bottom: -129px;
   animation-delay: 2s;
+}
+
+.darkMode {
+  background-color: var(--main-darker);
 }
