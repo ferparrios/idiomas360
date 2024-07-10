@@ -147,10 +147,6 @@
   background-color: hsl(198, 90%, 55%);
 }
 
-/* .theme__toggle:checked ~ .theme__fill {
-  transform: translateX(0);
-} */
-
 .theme__toggle:checked ~ .theme__icon .theme__icon-part:nth-child(1) {
   box-shadow: 0.2rem -0.2rem 0 0.2rem hsl(0, 0%, 100%) inset;
   transform: scale(1);

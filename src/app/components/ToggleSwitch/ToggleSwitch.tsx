@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import styles from "./ToggleSwitch.module.css";
 
 type ToggleSwitchProps = {
@@ -9,7 +8,6 @@ type ToggleSwitchProps = {
 
 export const ToggleSwitch = ({setIsDark}: ToggleSwitchProps) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.checked);
     setIsDark(event.target.checked);
   }
 

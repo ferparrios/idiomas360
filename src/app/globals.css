@@ -13,6 +13,8 @@
   --main-light: #5bbafe;
   --main-dark: rgb(6, 75, 140);
   --main-dark-opac20: rgba(6, 75, 140, 0.2);
+  --main-dark-opac50: rgba(6, 75, 140, 0.5);
+  --main-dark-opac60: rgba(6, 75, 140, 0.6);
   --main-darker: rgb(0, 47, 92);
   --white: white;
   --white-opac90: rgba(255, 255, 255, 0.9);
@@ -79,6 +81,25 @@ section {
   align-items: space-between;
 }
 
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.card {
+  padding: 18px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(2px);
+}
+
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
 @media screen and (min-width: 768px) {
   .section-info {
     flex-direction: row;
@@ -90,24 +111,13 @@ section {
     min-width: 300px;
     margin: 0 25px 0 0;
   }
+  .card {
+    padding: 30px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .image {
     min-width: 400px;
   }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-.card {
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(2px);
 }

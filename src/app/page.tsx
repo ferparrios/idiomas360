@@ -6,7 +6,7 @@ import { Footer } from "./components/Footer/Footer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24">
       <section id="home">
         <h2>Sabías que...?</h2>
         <div className="section-info card">
@@ -100,13 +100,12 @@ export default function Home() {
       <section id="contact">
         <h2>Contáctanos</h2>
         <h4>Puedes hacernos llegar tus dudas y/o sugerencias a:</h4>
-        <Form />
+        <Form/>
       </section>
 
       <section id="footer">
         <Footer />            
       </section>
-      
     </main>
   );
 }

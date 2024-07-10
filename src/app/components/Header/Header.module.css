@@ -28,9 +28,70 @@
   align-items: center;
 }
 
-.nav__items {
-  display: flex;
-  align-items: center;
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.menuOpen {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  z-index: 2;
+  padding: 20px 0;
+  justify-content: center;
+  width: 100%;
+  max-width: 220px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  box-shadow: var(--main-dark-opac20) 0px 13px 37px -5px,
+    var(--main-dark-opac20) 0px 8px 26px -8px;
+  animation: fade .5s ease-in-out;
+}
+
+.darkMode {
+  color: var(--white);
+  background-color: var(--main-dark-opac60);
+  box-shadow: var(--main-dark-opac50) 0px 12px 27px -5px,
+    var(--main-dark-opac50) 0px 8px 22px -8px;
+}
+
+.toggle {
+  position: relative;
+}
+
+.close__icon {
+  position: relative;
+  top: 0px;
+  left: -2px;
+  z-index: 2;
+}
+
+@media screen and (min-width: 640px) {
+  .nav__items {
+    display: flex;
+    width: 100%;
+    max-width: fit-content;
+    padding: 0;
+    background-color: none;
+    border: none;
+    box-shadow: none;
+    background-color: initial;
+  }
+
+  .menuOpen {
+    position: static;
+  }
+
+  .darkMode {
+    color: var(--main-darker);
+  }
 }
 
 .nav__item {
@@ -42,4 +103,69 @@
 .nav__item:hover {
   color: var(--main-dark);
   font-weight: bold;
+}
+
+.menuButton {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 3px 3px 6px var(--main-dark-opac50),
+    -3px -3px 6px var(--secondary-opac40);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 640px) {
+  .menuButton {
+    display: none;
+  }
+}
+
+.menuButton:hover {
+  border: 1px solid white;
+}
+
+.menuButton:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.menu__input[type="checkbox"] {
+  appearance: none;
+  display: none;
+  visibility: hidden;
+}
+
+.menuButton span {
+  width: 18px;
+  height: 2px;
+  background: var(--main-dark);
+  border-radius: 100px;
+  transition: 0.3s ease;
+}
+
+.menu__input[type]:checked ~ span.top {
+  transform: translateY(8px) rotate(45deg);
+  width: 20px;
+}
+
+.menu__input[type]:checked ~ span.bot {
+  transform: translateY(-6px) rotate(-45deg);
+  width: 20px;
+  box-shadow: 0 0 10px #495057;
+}
+
+.menu__input[type]:checked ~ span.mid {
+  transform: translateX(-20px);
+  opacity: 0;
 }

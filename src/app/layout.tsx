@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/Header/Header";
 import AnimatedBackground from "./components/AnimatedBackground/AnimatedBackground";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { metadata } from "./metadata"; // Import the metadata
 
 const inter = Inter({ subsets: ["latin"] });
